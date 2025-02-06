@@ -42,9 +42,38 @@ public class HomeController : Controller
         return View(todo);
     }
 
+    public async Task<IActionResult> Edit(int Id)
+    {
+        var todo = await _context.Todos.FindAsync(Id);
+        return View(todo);
+    }
 
+    [HttpPost]
+    public async Task<IActionResult> Edit(int Id, [Bind("Id, Task")] Todo todo)
+    {
+        if (ModelState.IsValid)
+        {
+            _context.Update(todo);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+        return View(todo);
+    }
 
+    public async Task<IActionResult> Delete(int Id)
+    {
+        var todo = await _context.Todos.FindAsync(Id);
+        return View(todo);
+    }
 
+    [HttpPost, ActionName("Delete")]
+    public async Task<IActionResult> DeleteConfirmed(int Id)
+    {
+        var todo = await _context.Todos.FindAsync(Id);
+        _context.Todos.Remove(todo);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Index");
+    }
 
 
 

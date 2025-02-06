@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("persistTodoApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ef46c43f750217f4486a557b193caa6fefa9a07")]
 [assembly: System.Reflection.AssemblyProductAttribute("persistTodoApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("persistTodoApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
